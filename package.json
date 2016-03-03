@@ -1,7 +1,7 @@
 {
   "name": "module-template",
   "version": "0.1.1",
-  "description": "模块开发脚手架项目",
+  "description": "",
   "main": "lib",
   "repository": "git://code.dianpingoa.com/min.xiao/module-template.git",
   "keywords": [
