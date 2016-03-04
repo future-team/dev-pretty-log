@@ -4,7 +4,7 @@
 
 
 
-import devLog from '../../src/main.js';
+import devLog from '../../src/index.js';
 devLog.log('1st param','2nd param');
 devLog.warn('warn');
 devLog.debug('add true to pause programming');

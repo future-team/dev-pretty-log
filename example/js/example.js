@@ -62,18 +62,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _srcMainJs = __webpack_require__(1);
+	var _srcIndexJs = __webpack_require__(1);
 
-	var _srcMainJs2 = _interopRequireDefault(_srcMainJs);
+	var _srcIndexJs2 = _interopRequireDefault(_srcIndexJs);
 
-	_srcMainJs2['default'].log('1st param', '2nd param');
-	_srcMainJs2['default'].warn('warn');
-	_srcMainJs2['default'].debug('add true to pause programming');
-	_srcMainJs2['default'].dir('warn');
-	_srcMainJs2['default'].error('error');
-	_srcMainJs2['default'].dir('warn', 'dir', { a: 1, b: { c: 2 } });
-	_srcMainJs2['default'].alert('alert a string');
-	_srcMainJs2['default'].alert({ a: 'test', b: { c: 'test' } });
+	_srcIndexJs2['default'].log('1st param', '2nd param');
+	_srcIndexJs2['default'].warn('warn');
+	_srcIndexJs2['default'].debug('add true to pause programming');
+	_srcIndexJs2['default'].dir('warn');
+	_srcIndexJs2['default'].error('error');
+	_srcIndexJs2['default'].dir('warn', 'dir', { a: 1, b: { c: 2 } });
+	_srcIndexJs2['default'].alert('alert a string');
+	_srcIndexJs2['default'].alert({ a: 'test', b: { c: 'test' } });
 
 /***/ },
 /* 1 */
@@ -252,10 +252,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	var styles = {
 	    warn: padding + bg + red,
 	    debug: padding + bg + blue,
-	    error: padding + bg + purple,
+	    alert: padding + bg + purple,
 	    log: padding + bg + white,
 	    dir: padding + bg + green,
-	    alert: padding + bg + yellowRed
+	    error: padding + bg + yellowRed
 	};
 
 	exports['default'] = {

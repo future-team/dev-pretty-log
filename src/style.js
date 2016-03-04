@@ -12,7 +12,7 @@ const yellowRed = 'color:#AB3006';
 let styles = {
     warn :padding+bg+red,
     debug :padding+bg+ blue,
-    alert:padding+bg+purple,
+    alarm:padding+bg+purple,
     log:padding+bg+white,
     dir:padding+bg+green,
     error:padding+bg+yellowRed
@@ -24,5 +24,5 @@ export default {
     warn:["%c Warn",styles['warn']],
     dir:["%c Dir",styles['dir']],
     error:["%c Error",styles['error']],
-    alert:["%c Alert",styles['alert']],
+    alarm:["%c Alert",styles['alarm']],
 };

@@ -6,7 +6,7 @@
 /**
  * 仅仅在开发环境下打印日志，上线后自动根据域名去除所有日志打印功能
  * 共有以下6个api供外界调用,使用方式和原先的alert和console基本相同
- * log/warn/error/dir/alert/debug
+ * log/warn/error/dir/alarm/debug
  * 备注:devLog.debug(param,bool)如果在第二个参数设置为true,会在程序运行时自动打上breakpoint
  *
  */
@@ -65,11 +65,11 @@ var logProto ={
         loggerConsole.apply(null,finalArgs)
     },
     /**
-     * 将相关参数字符串化，并在窗口alert和打印console
-     * @method alert
+     * 将相关参数字符串化，并在窗口alarm和打印console
+     * @method alarm
      * @param msg
      */
-    alert:function(msg){
+    alarm:function(msg){
         let transString=(function(){
             switch (typeof msg){
                 case 'object':
@@ -78,7 +78,7 @@ var logProto ={
                     return msg||'';
             }
         }());
-        var finalArgs=styleArrayObj['alert'].concat([].slice.call(arguments));
+        var finalArgs=styleArrayObj['alarm'].concat([].slice.call(arguments));
         loggerConsole.apply(null,finalArgs);
         alert(transString);
     },

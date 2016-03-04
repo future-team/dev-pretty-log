@@ -10,14 +10,23 @@
 ## 使用
 - bower install devLog --save
 - npm install devLog --save-dev
-- git clone 
+- git clone https://github.com/mtuan-f4/devLog.git
 
+``` javascript
 
-- 全局安装smartDoc 用于生成文档
-
-## Command
-
+	import devLog from 'devLog'
+	devLog.alert({a:1});
+	devLog.log('hello','world');
+	devLog.debug('hello world');
+	devLog.warn('warning');
+	devLog.error('warning');
+	devLog.dir('warning');
+	
 ```
+
+## 命令
+
+``` bash
 	#测试	
 	npm run test	
 	#打包	
