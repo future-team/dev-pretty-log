@@ -1,4 +1,5 @@
 # devLog(前端项目的本地及线上日志模块，封装了alert和console的功能)
+
 ## 主要功能介绍
 -  一个模块封装alert和console
 -  对前端本地开发的日志记录添加样式，打印信息的形式更加直观
@@ -7,12 +8,10 @@
 
 
 ## 使用
+- bower install devLog --save
+- npm install devLog --save-dev
+- git clone 
 
-- 下载此项目至本地，修改项目名称和package.json里的信息；
-- git remote rm origin
-- git remote add origin {你的仓库地址}  例如：git remote add origin git@code.dianpingoa.com:pc-trade-f2e/apollo-template-static.git
-- git fetch
-- git pull origin master
 
 - 全局安装smartDoc 用于生成文档
 
