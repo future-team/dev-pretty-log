@@ -4,23 +4,27 @@
 -  一个模块封装alert和console
 -  对前端本地开发的日志记录添加样式，打印信息的形式更加直观
 -  自动检测线上环境，去除所有的打印信息及alert
--  增加线上日志调试接口，重现所有开发日志，方便处理项目上线后出现的问题
+-  增加线上日志调试接口。重现开发日志，便于处理项目线上问题
 
+## 安装
 
-## 使用
 - bower install devLog --save
 - npm install devLog --save-dev
 - git clone https://github.com/mtuan-f4/devLog.git
 
+## 使用
+
 ``` javascript
 
 	import devLog from 'devLog'
-	devLog.alert({a:1});
+	devLog.alarm({a:1});//自动将对象转换成字符串
 	devLog.log('hello','world');
 	devLog.debug('hello world');
 	devLog.warn('warning');
 	devLog.error('warning');
 	devLog.dir('warning');
+	devLog.open()//开启线上日志
+	devLog.open(true)//自动刷新线上日志
 	
 ```
 

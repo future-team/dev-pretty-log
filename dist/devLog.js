@@ -54,26 +54,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by slashhuang on 16/3/3.
-	 */
+	module.exports = __webpack_require__(1);
 
-	'use strict';
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	var _srcIndexJs = __webpack_require__(1);
-
-	var _srcIndexJs2 = _interopRequireDefault(_srcIndexJs);
-
-	_srcIndexJs2['default'].log('1st param', '2nd param');
-	_srcIndexJs2['default'].warn('warn');
-	_srcIndexJs2['default'].debug('add true to pause programming');
-	_srcIndexJs2['default'].dir('warn');
-	_srcIndexJs2['default'].error('error');
-	_srcIndexJs2['default'].dir('warn', 'dir', { a: 1, b: { c: 2 } });
-	_srcIndexJs2['default'].alert('alert a string');
-	_srcIndexJs2['default'].alert({ a: 'test', b: { c: 'test' } });
 
 /***/ },
 /* 1 */
