@@ -17,7 +17,7 @@
 ``` javascript
 
 	import devLog from 'devLog'
-	devLog.alarm({a:1});//自动将对象转换成字符串
+	devLog.alarm({a:1});//自动将对象转换成字符串,同时在窗口和控制台打印
 	devLog.log('hello','world');
 	devLog.debug('hello world');
 	devLog.warn('warning');
