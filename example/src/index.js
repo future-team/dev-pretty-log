@@ -5,11 +5,12 @@
 
 
 import devLog from '../../src/main.js';
-devLog.log('log');
+devLog.log('1st param','2nd param');
 devLog.warn('warn');
-devLog.debug('add true to pause programming',true);
-devLog.debug('without 2nd param to true, programming goes on');
+devLog.debug('add true to pause programming');
 devLog.dir('warn');
+devLog.error('error');
+devLog.dir('warn','dir',{a:1,b:{c:2}});
 devLog.alert('alert a string');
 devLog.alert({a:'test',b:{c:'test'}});
 

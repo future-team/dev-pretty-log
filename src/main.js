@@ -5,24 +5,19 @@
  */
 /**
  * 仅仅在开发环境下打印日志，上线后自动根据域名去除所有日志打印功能
- * 共有一下6个api供外界调用,使用方式和原先的alert和console基本相同
+ * 共有以下6个api供外界调用,使用方式和原先的alert和console基本相同
  * log/warn/error/dir/alert/debug
  * 备注:devLog.debug(param,bool)如果在第二个参数设置为true,会在程序运行时自动打上breakpoint
  *
  */
 
 import env from './env';
-import * as styles from './style';
-var hasOwn ={}.hasOwnProperty;
-//extend key/value to target
-var extendProto =function(target,extension,isCopyValue){
-    for(var key in extension){
-      if(hasOwn.call(extension,key)){
-          //如果是线上有域名的环境，则每个function都是return false，默认不做动作
-          target[key]=isCopyValue?extension[key]:function(){return false};
-      }
-    }
-};
+import * as styleArrayObj from './style';
+import  {
+    loggerConsole,
+    hasOwn,
+    extendProto,
+} from './util.js';
 
 var logProto ={
     /**
@@ -31,20 +26,16 @@ var logProto ={
      * @param args
      */
     log:function(args){
-        console.log("%c Log",styles['log'],args)
+        var finalArgs=styleArrayObj['log'].concat([].slice.call(arguments));
+        loggerConsole.apply(null,finalArgs)
     },
     /**
-     * debug拥有debug和log的功能
+     * 打印debug信息
      * @param args  你所想要打印的变量
-     * @param bool  是否采用debug模式,在此处打上breakpoint
      */
-    debug:function(args,bool){
-        if(bool){
-            console.log("%c Debugging",styles['debugging'],args);
-            debugger;
-        }else{
-            console.log("%c Debug",styles['debug'],args);
-        }
+    debug:function(args){
+        var finalArgs=styleArrayObj['debug'].concat([].slice.call(arguments));
+        loggerConsole.apply(null,finalArgs)
     },
     /**
      * 打印警告信息，并标注颜色
@@ -52,7 +43,8 @@ var logProto ={
      * @param args
      */
     warn:function(args){
-        console.log("%c Warn",styles['warn'],args);
+        var finalArgs=styleArrayObj['warn'].concat([].slice.call(arguments));
+        loggerConsole.apply(null,finalArgs)
     },
     /**
      * 打印错误信息，并标注颜色
@@ -60,7 +52,8 @@ var logProto ={
      * @param args
      */
     error:function(args){
-        console.log("%c Error",styles['error'],args)
+        var finalArgs=styleArrayObj['error'].concat([].slice.call(arguments));
+        loggerConsole.apply(null,finalArgs)
     },
     /**
      * 打印类对象信息，并标注颜色
@@ -68,7 +61,8 @@ var logProto ={
      * @param arguments
      */
     dir:function(){
-        console.log("%c Dir",styles['dir'],arguments);
+        var finalArgs=styleArrayObj['dir'].concat([].slice.call(arguments));
+        loggerConsole.apply(null,finalArgs)
     },
     /**
      * 将相关参数字符串化，并在窗口alert和打印console
@@ -84,14 +78,22 @@ var logProto ={
                     return msg||'';
             }
         }());
-        console.log("%c Alert",styles['alert'],transString);
+        var finalArgs=styleArrayObj['alert'].concat([].slice.call(arguments));
+        loggerConsole.apply(null,finalArgs);
         alert(transString);
+    },
+    open:function(bool){
+        localStorage.setItem('DianPing','mTuan-f4');
+        if(bool) location.reload();
     }
 };
 var factory =function(){
     var loggerFactory=function(){};
     extendProto(loggerFactory.prototype,logProto,env());
-    return new loggerFactory();
+    var devLog =  new loggerFactory();
+    devLog.__proto__.open = logProto.open;
+    //增加开关，api隐藏在prototype的原型里
+    return devLog
 };
 window['devLog'] = factory();
 export default factory();
