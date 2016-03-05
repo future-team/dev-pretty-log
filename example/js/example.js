@@ -66,11 +66,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _srcIndexJs2 = _interopRequireDefault(_srcIndexJs);
 
 	_srcIndexJs2['default'].log('1st param', '2nd param');
-	_srcIndexJs2['default'].warn('warn');
-	_srcIndexJs2['default'].debug('add true to pause programming');
+	_srcIndexJs2['default'].warn({ a: 1, b: { c: 2 } });
+
+	_srcIndexJs2['default'].debug('debugging');
 	_srcIndexJs2['default'].dir('warn');
 	_srcIndexJs2['default'].error('error');
-	_srcIndexJs2['default'].dir('warn', 'dir', { a: 1, b: { c: 2 } });
+	_srcIndexJs2['default'].dir('warn', { a: 1, b: { c: 2 } });
 
 /***/ },
 /* 1 */

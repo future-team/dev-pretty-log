@@ -1,4 +1,4 @@
-### dev-pretty-log(前端项目的本地及线上调试日志模块，封装了alert和console的功能)
+## dev-pretty-log(前端项目的本地及线上调试日志模块)
 
 #### 主要功能介绍
 
