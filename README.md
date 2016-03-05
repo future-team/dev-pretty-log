@@ -17,12 +17,12 @@
 - git clone https://github.com/mtuan-f4/dev-pretty-log.git
 
 ### 使用
->前端项目
+>html:script标签引入
 
 ```
 	<script src="path to dev-pretty-log/dist/dev-pretty-log.min.js"></script>
 ```
->ECMAScript6 语法
+>JS:ECMAScript6 语法
 
 ``` javascript
 
