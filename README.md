@@ -1,21 +1,22 @@
-# dev-pretty-log(前端项目的本地及线上调试日志模块，封装了alert和console的功能)
+### dev-pretty-log(前端项目的本地及线上调试日志模块，封装了alert和console的功能)
 
-## 主要功能介绍
+#### 主要功能介绍
+
 -  封装alert和console
 -  对前端本地开发的日志记录添加样式，打印信息的形式更加直观
 -  自动检测线上环境，去除所有的打印信息及alert
 -  增加线上日志调试接口。重现开发日志，便于处理项目线上问题
 
-## 注意点
-#### 默认仅对localhost和127.0.0.1的url地址可见日志
+### 注意点
+> 默认仅对localhost和127.0.0.1的url地址可见日志
 
-## 安装
+#### 安装
 
 - bower install dev-pretty-log --save
 - npm install dev-pretty-log --save-dev
 - git clone https://github.com/mtuan-f4/dev-pretty-log.git
 
-## 使用
+### 使用
 
 ``` javascript
 
@@ -33,7 +34,7 @@
 	
 ```
 
-## 命令
+### 命令
 
 ``` bash	
 
