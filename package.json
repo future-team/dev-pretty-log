@@ -1,15 +1,17 @@
 {
-  "name": "devLog",
+  "name": "dev-pretty-log",
   "version": "0.1.1",
   "description": "devLog integrates console and alert with dev features,read readme.md to see more",
   "main": "lib/index.js",
   "repository": "git://code.dianpingoa.com/min.xiao/module-template.git",
   "keywords": [
-    "log","development","production"
+    "log",
+    "alert",
+    "console",
+    "development"
   ],
   "scripts": {
     "build": "node_modules/.bin/gulp && node_modules/.bin/gulp min",
-    "test": "karma start",
     "demo": "node_modules/.bin/gulp demo",
     "doc": "smartDoc ||node_modules/.bin/smartDoc"
   },
@@ -18,7 +20,7 @@
     "name": "xiaogang.huang@dianping.com",
     "email": "xiaogang.huang@dianping.com"
   },
-  "dependencies":{},
+  "dependencies": {},
   "devDependencies": {
     "babel": "^6.0.15",
     "babel-core": "^5.8.23",
@@ -34,9 +36,11 @@
     "gulp-less": "^3.0.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.1",
+    "gulp-open": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.6",
     "gulp-webpack": "^1.5.0",
+    "http-server": "^0.9.0",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.15",
     "karma-chrome-launcher": "^0.2.1",
@@ -54,7 +58,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "bugs": {
-    "url": "http://code.dianpingoa.com/min.xiao/module-template/issues"
+    "url": "https://github.com/mtuan-f4/dev-pretty-log/issues"
   },
-  "homepage": "http://code.dianpingoa.com/min.xiao/module-template"
+  "homepage": "https://github.com/mtuan-f4/dev-pretty-log"
 }

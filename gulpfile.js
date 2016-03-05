@@ -34,6 +34,7 @@ gulp.task('demo-webpack', function(done) {
 });
 
 gulp.task('require-webpack', function(done) {
+  console.log('require')
   webpack(webpackConfig).run(function(err, stats) {
     if(err) throw new gutil.PluginError("require-webpack", err);
     gutil.log("[webpack]", stats.toString({
