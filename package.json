@@ -1,6 +1,6 @@
 {
   "name": "dev-pretty-log",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "devLog integrates console and alert with dev features,read readme.md to see more",
   "main": "lib/index.js",
   "repository": "git://code.dianpingoa.com/min.xiao/module-template.git",
