@@ -17,7 +17,10 @@
 - git clone https://github.com/mtuan-f4/dev-pretty-log.git
 
 ### 使用
-
+```
+	<script src="path to dev-pretty-log/dist/dev-pretty-log.min.js"></script>
+	
+```
 ``` javascript
 
 	import devLog from 'dev-pretty-log'

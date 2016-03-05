@@ -1,9 +1,9 @@
 {
   "name": "dev-pretty-log",
   "version": "0.1.2",
-  "description": "devLog integrates console and alert with dev features,read readme.md to see more",
+  "description": "dev-pretty-log integrates console and alert with dev features.when your project is published onLine,dev-pretty-log can close your logs automatically",
   "main": "lib/index.js",
-  "repository": "git://code.dianpingoa.com/min.xiao/module-template.git",
+  "repository": "https://github.com/mtuan-f4/dev-pretty-log.git",
   "keywords": [
     "log",
     "alert",
