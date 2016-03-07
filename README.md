@@ -12,7 +12,7 @@
 
 #### 安装
 
-- bower install dev-pretty-log --save
+- bower install devlog --save
 - npm install dev-pretty-log --save-dev
 - git clone https://github.com/mtuan-f4/dev-pretty-log.git
 
