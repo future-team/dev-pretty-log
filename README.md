@@ -22,10 +22,10 @@
 ```
 	<script src="path to dev-pretty-log/dist/dev-pretty-log.min.js"></script>
 	<script>
-	    devLog.open();//open log
+	    devLog.open();//线上开启log功能,本地默认开启
 	    devLog.log('hello world');
 	    devLog.warn('it's a warning);
-	    devLog.close();//close log
+	    devLog.close();//关闭log功能
 	</script>
 
 ```
@@ -50,7 +50,7 @@
 ``` bash	
 
 	npm run build	#打包	
-	npm run demo 	#查看demo cd examples && open index.html
+	npm run demo 	#查看demo方式 cd examples && open index.html
 	
 ```
 
