@@ -40,8 +40,8 @@
 	devLog.warn('warning');
 	devLog.error('warning');
 	devLog.dir('warning');
-	devLog.open()//开启日志,刷新后可见
-	devLog.close()//关闭日志，刷新可见	
+	devLog.open()//手动开启日志(默认本地开发不需手动开启)
+	devLog.close()//手动关闭日志
 	
 ```
 
