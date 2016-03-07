@@ -67,9 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	_srcIndexJs2['default'].log('1st param', '2nd param');
 	_srcIndexJs2['default'].warn({ a: 1, b: { c: 2 } });
-
 	_srcIndexJs2['default'].debug('debugging');
-	_srcIndexJs2['default'].dir('warn');
 	_srcIndexJs2['default'].error('error');
 	_srcIndexJs2['default'].dir('warn', { a: 1, b: { c: 2 } });
 
@@ -78,8 +76,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
-	 * devLog 0.0.1
-	 * Copyright(c) 2016 https://github.com/mtuan-f4  dianping.com
+	 * devLog 0.1.4
+	 * Copyright(c) 2016 https://github.com/mtuan-f4
+	 * DianPing.com
 	 * MIT Licensed
 	 */
 	/**
@@ -87,7 +86,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * 共有以下6个api供外界调用,使用方式和原先的alert和console基本相同
 	 * log/warn/error/dir/alarm/debug
 	 * 同时增加close和open方法可以手动开关日志调试功能
-	 *
 	 */
 
 	'use strict';
@@ -112,33 +110,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	    /**
 	     * 打印日志，并标注颜色
 	     * @method log
-	     * @param args
+	     * @param arguments
 	     */
-	    log: function log(args) {
+	    log: function log() {
 	        var finalArgs = styleArrayObj['log'].concat([].slice.call(arguments));
 	        _utilJs.loggerConsole.apply(null, finalArgs);
 	    },
 	    /**
 	     * 打印debug信息
-	     * @param args  你所想要打印的变量
+	     * @param arguments
 	     */
-	    debug: function debug(args) {
+	    debug: function debug() {
 	        var finalArgs = styleArrayObj['debug'].concat([].slice.call(arguments));
 	        _utilJs.loggerConsole.apply(null, finalArgs);
 	    },
 	    /**
 	     * 打印警告信息，并标注颜色
 	     * @method warn
-	     * @param args
+	     * @param arguments
 	     */
-	    warn: function warn(args) {
+	    warn: function warn() {
 	        var finalArgs = styleArrayObj['warn'].concat([].slice.call(arguments));
 	        _utilJs.loggerConsole.apply(null, finalArgs);
 	    },
 	    /**
 	     * 打印错误信息，并标注颜色
 	     * @method error
-	     * @param args
+	     * @param arguments
 	     */
 	    error: function error(args) {
 	        var finalArgs = styleArrayObj['error'].concat([].slice.call(arguments));
@@ -154,7 +152,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _utilJs.loggerConsole.apply(null, finalArgs);
 	    },
 	    /**
-	     * 将相关参数字符串化，并在窗口alarm和打印console
+	     * 将相关参数字符串化，并在窗口alert和打印console
 	     * @method alarm
 	     * @param msg
 	     */
@@ -171,13 +169,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _utilJs.loggerConsole.apply(null, finalArgs);
 	        alert(transString);
 	    },
-	    open: function open(bool) {
+	    open: function open() {
 	        localStorage.setItem('__onLine__', 'onLine');
-	        if (bool) location.reload();
+	        var finalArgs = styleArrayObj['open'].concat(['refresh page to see logs']);
+	        _utilJs.loggerConsole.apply(null, finalArgs);
 	    },
-	    close: function close(bool) {
+	    close: function close() {
 	        localStorage.setItem('__onLine__', 'offLine');
-	        if (bool) location.reload();
+	        var finalArgs = styleArrayObj['close'].concat(['refresh page to see logs']);
+	        _utilJs.loggerConsole.apply(null, finalArgs);
 	    }
 	};
 	var factory = function factory() {
@@ -253,18 +253,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	var padding = "padding-right:5px;";
 	var bg = 'background:#FF9E35;';
 	var green = 'color:#60b044';
+	var darkGreen = 'color:#009a61';
 	var red = 'color:#cb3837';
 	var white = 'color:#ffffff';
 	var purple = 'color:#609';
 	var blue = 'color:#07a';
 	var yellowRed = 'color:#AB3006';
+	var black = 'color:#000';
 	var styles = {
 	    warn: padding + bg + red,
 	    debug: padding + bg + blue,
 	    alarm: padding + bg + purple,
 	    log: padding + bg + white,
 	    dir: padding + bg + green,
-	    error: padding + bg + yellowRed
+	    error: padding + bg + yellowRed,
+	    close: padding + bg + black,
+	    open: padding + bg + darkGreen
 	};
 
 	exports['default'] = {
@@ -273,7 +277,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    warn: ["%c Warn", styles['warn']],
 	    dir: ["%c Dir", styles['dir']],
 	    error: ["%c Error", styles['error']],
-	    alarm: ["%c Alert", styles['alarm']]
+	    alarm: ["%c Alert", styles['alarm']],
+	    open: ["%c Open log", styles['open']],
+	    close: ["%c Close log", styles['close']]
 	};
 	module.exports = exports['default'];
 

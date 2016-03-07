@@ -1,6 +1,7 @@
 /**
- * devLog 0.0.1
- * Copyright(c) 2016 https://github.com/mtuan-f4  dianping.com
+ * devLog 0.1.4
+ * Copyright(c) 2016 https://github.com/mtuan-f4
+ * DianPing.com
  * MIT Licensed
  */
 /**
@@ -8,7 +9,6 @@
  * 共有以下6个api供外界调用,使用方式和原先的alert和console基本相同
  * log/warn/error/dir/alarm/debug
  * 同时增加close和open方法可以手动开关日志调试功能
- *
  */
 
 import env from './env';
@@ -23,33 +23,33 @@ var logProto ={
     /**
      * 打印日志，并标注颜色
      * @method log
-     * @param args
+     * @param arguments
      */
-    log:function(args){
+    log:function(){
         var finalArgs=styleArrayObj['log'].concat([].slice.call(arguments));
         loggerConsole.apply(null,finalArgs)
     },
     /**
      * 打印debug信息
-     * @param args  你所想要打印的变量
+     * @param arguments
      */
-    debug:function(args){
+    debug:function(){
         var finalArgs=styleArrayObj['debug'].concat([].slice.call(arguments));
         loggerConsole.apply(null,finalArgs)
     },
     /**
      * 打印警告信息，并标注颜色
      * @method warn
-     * @param args
+     * @param arguments
      */
-    warn:function(args){
+    warn:function(){
         var finalArgs=styleArrayObj['warn'].concat([].slice.call(arguments));
         loggerConsole.apply(null,finalArgs)
     },
     /**
      * 打印错误信息，并标注颜色
      * @method error
-     * @param args
+     * @param arguments
      */
     error:function(args){
         var finalArgs=styleArrayObj['error'].concat([].slice.call(arguments));
@@ -65,7 +65,7 @@ var logProto ={
         loggerConsole.apply(null,finalArgs)
     },
     /**
-     * 将相关参数字符串化，并在窗口alarm和打印console
+     * 将相关参数字符串化，并在窗口alert和打印console
      * @method alarm
      * @param msg
      */
@@ -82,13 +82,15 @@ var logProto ={
         loggerConsole.apply(null,finalArgs);
         alert(transString);
     },
-    open:function(bool){
+    open:function(){
         localStorage.setItem('__onLine__','onLine');
-        if(bool) location.reload();
+        var finalArgs=styleArrayObj['open'].concat(['refresh page to see logs']);
+        loggerConsole.apply(null,finalArgs);
     },
-    close:function(bool){
+    close:function(){
         localStorage.setItem('__onLine__','offLine');
-        if(bool) location.reload();
+        var finalArgs=styleArrayObj['close'].concat(['refresh page to see logs']);
+        loggerConsole.apply(null,finalArgs);
     }
 };
 var factory =function(){

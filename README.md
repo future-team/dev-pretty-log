@@ -33,10 +33,8 @@
 	devLog.warn('warning');
 	devLog.error('warning');
 	devLog.dir('warning');
-	devLog.open()//开启日志
-	devLog.open(true)//自动刷新日志
-	devLog.close()//关闭日志
-	devLog.close(true)//关闭日志并自动刷新
+	devLog.open()//开启日志,刷新后可见
+	devLog.close()//关闭日志，刷新可见	
 	
 ```
 
@@ -45,7 +43,7 @@
 ``` bash	
 
 	npm run build	#打包	
-	npm run demo	#例子演示	
+	npm run demo 	#例子演示	 cd examples && open index.html
 	
 ```
 
