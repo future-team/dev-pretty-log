@@ -1,6 +1,6 @@
 /**
  * devLog 0.1.4
- * Copyright(c) 2016 https://github.com/mtuan-f4
+ * Copyright(c) 2016 https://github.com/future-team
  * DianPing.com
  * MIT Licensed
  */
