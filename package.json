@@ -1,6 +1,6 @@
 {
   "name": "dev-pretty-log",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "dev-pretty-log integrates console and alert with dev features.It closes your logs automatically when your project is published onLine",
   "main": "lib/index.js",
   "repository": "https://github.com/mtuan-f4/dev-pretty-log",
@@ -58,7 +58,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "bugs": {
-    "url": "https://github.com/mtuan-f4/dev-pretty-log/issues"
+    "url": "https://github.com/future-team/dev-pretty-log/issues"
   },
-  "homepage": "https://github.com/mtuan-f4/dev-pretty-log"
+  "homepage": "https://github.com/future-team/dev-pretty-log"
 }
