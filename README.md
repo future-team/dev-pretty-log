@@ -12,7 +12,6 @@
 
 #### 安装
 
-- bower install devlog --save
 - npm install dev-pretty-log --save-dev
 - git clone https://github.com/future-team/dev-pretty-log
 

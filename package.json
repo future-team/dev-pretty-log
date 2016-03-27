@@ -1,6 +1,6 @@
 {
   "name": "dev-pretty-log",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "dev-pretty-log integrates console and alert with dev features.It closes your logs automatically when your project is published onLine",
   "main": "lib/index.js",
   "repository": "https://github.com/mtuan-f4/dev-pretty-log",
