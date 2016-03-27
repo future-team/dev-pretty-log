@@ -14,7 +14,7 @@
 
 - bower install devlog --save
 - npm install dev-pretty-log --save-dev
-- git clone https://github.com/mtuan-f4/dev-pretty-log.git
+- git clone https://github.com/future-team/dev-pretty-log
 
 ### 使用
 >html:script标签引入
